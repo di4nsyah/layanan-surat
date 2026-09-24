@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+nav {
+  margin-bottom: 1.5rem;
+}
+
+nav a {
+  margin-right: 1rem;
+}
+
+main section {
+  margin-bottom: 1.5rem;
+}
+
+h1, h2 {
+  margin-bottom: 0.5rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+
+
+form {
+  max-width: 100%;
+}
+
+fieldset {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid;
+  font-size: 1rem;
+}
+
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.radio-group label {
+  display: inline;
+}
+
+dl {
+  margin-top: 0.5rem;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+}
+
+.overflow-x {
+  overflow-x: auto;
+}
+
+table.bordered {
+  border: 1px solid;
+}
+
+table.bordered th, table.bordered td {
+  border: 1px solid;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid;
+}

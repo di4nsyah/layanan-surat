@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajukan Surat - Layanan Surat Online</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Layanan Surat Online</h1>
+    <p>Kelurahan Sukamaju</p>
+  </header>
+
+  <nav>
+    <a href="../index.html">Beranda</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="ajukan.html">Ajukan Surat</a>
+    <a href="lacak.html">Lacak Pengajuan</a>
+    <a href="login.html">Keluar</a>
+  </nav>
+
+  <main>
+    <h2>Ajukan Surat Baru</h2>
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Langkah 1: Pilih Jenis Surat</legend>
+        <div class="radio-group">
+          <input type="radio" id="jenis_pengantar" name="jenis_surat" value="pengantar" required>
+          <label for="jenis_pengantar" class="inline">Surat Pengantar</label><br>
+          <input type="radio" id="jenis_domisili" name="jenis_surat" value="domisili">
+          <label for="jenis_domisili" class="inline">Surat Keterangan Domisili</label><br>
+          <input type="radio" id="jenis_sktm" name="jenis_surat" value="sktm">
+          <label for="jenis_sktm" class="inline">Surat Keterangan Tidak Mampu (SKTM)</label><br>
+          <input type="radio" id="jenis_usaha" name="jenis_surat" value="usaha">
+          <label for="jenis_usaha" class="inline">Surat Keterangan Usaha</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Langkah 2: Data Pemohon</legend>
+
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" value="Budi Santoso" required>
+
+        <label for="nik">NIK</label>
+        <input type="text" id="nik" name="nik" pattern="[0-9]{16}" minlength="16" maxlength="16" value="3275012345678901" required>
+
+        <label for="alamat">Alamat</label>
+        <textarea id="alamat" name="alamat" rows="3" required>Jl. Merdeka No. 10, RT 003/RW 005, Kelurahan Sukamaju</textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Langkah 3: Detail Sesuai Jenis Surat</legend>
+
+        <div id="fields_pengantar">
+          <label for="tujuan">Instansi Tujuan</label>
+          <input type="text" id="tujuan" name="tujuan">
+
+          <label for="keperluan_pengantar">Keperluan</label>
+          <textarea id="keperluan_pengantar" name="keperluan_pengantar" rows="2"></textarea>
+        </div>
+
+        <div id="fields_domisili">
+          <label for="lama_tinggal">Lama Tinggal (tahun)</label>
+          <input type="number" id="lama_tinggal" name="lama_tinggal" min="0">
+
+          <label for="keperluan_domisili">Keperluan</label>
+          <textarea id="keperluan_domisili" name="keperluan_domisili" rows="2"></textarea>
+        </div>
+
+        <div id="fields_sktm">
+          <label for="penghasilan">Penghasilan Per Bulan (Rp)</label>
+          <input type="number" id="penghasilan" name="penghasilan" min="0">
+
+          <label for="tanggungan">Jumlah Tanggungan</label>
+          <input type="number" id="tanggungan" name="tanggungan" min="0">
+
+          <label for="keperluan_sktm">Keperluan</label>
+          <textarea id="keperluan_sktm" name="keperluan_sktm" rows="2"></textarea>
+        </div>
+
+        <div id="fields_usaha">
+          <label for="nama_usaha">Nama Usaha</label>
+          <input type="text" id="nama_usaha" name="nama_usaha">
+
+          <label for="jenis_usaha">Jenis Usaha</label>
+          <input type="text" id="jenis_usaha" name="jenis_usaha">
+
+          <label for="alamat_usaha">Alamat Usaha</label>
+          <textarea id="alamat_usaha" name="alamat_usaha" rows="2"></textarea>
+
+          <label for="lama_usaha">Lama Usaha (tahun)</label>
+          <input type="number" id="lama_usaha" name="lama_usaha" min="0">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Langkah 4: Unggah Berkas</legend>
+        <p>Berkas wajib:</p>
+
+        <label for="ktp">KTP (wajib)</label>
+        <input type="file" id="ktp" name="ktp" accept=".jpg,.jpeg,.png,.pdf" required>
+
+        <label for="kk">Kartu Keluarga / KK (wajib)</label>
+        <input type="file" id="kk" name="kk" accept=".jpg,.jpeg,.png,.pdf" required>
+
+        <p>Berkas pendukung (opsional):</p>
+
+        <label for="pendukung">Surat Keterangan Pendukung</label>
+        <input type="file" id="pendukung" name="pendukung" accept=".jpg,.jpeg,.png,.pdf">
+
+        <small>Maksimal 2 MB per file. Format: JPG, JPEG, PNG, PDF</small>
+      </fieldset>
+
+      <fieldset>
+        <legend>Langkah 5: Konfirmasi</legend>
+        <p>
+          <input type="checkbox" id="konfirmasi" name="konfirmasi" required>
+          <label for="konfirmasi" class="inline">Saya menyatakan data yang diisi adalah benar dan seluruh berkas yang diunggah adalah asli.</label>
+        </p>
+      </fieldset>
+
+      <button type="submit">Kirim Pengajuan</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Kelurahan Sukamaju. Semua data fiktif untuk portofolio.</p>
+  </footer>
+</body>
+</html>

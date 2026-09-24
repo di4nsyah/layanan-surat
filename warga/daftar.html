@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar - Layanan Surat Online</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Layanan Surat Online</h1>
+    <p>Kelurahan Sukamaju</p>
+  </header>
+
+  <nav>
+    <a href="../index.html">Beranda</a>
+    <a href="daftar.html">Daftar</a>
+    <a href="login.html">Masuk</a>
+  </nav>
+
+  <main>
+    <h2>Buat Akun Baru</h2>
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Data Pribadi</legend>
+
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="nik">NIK (Nomor Induk Kependudukan)</label>
+        <input type="text" id="nik" name="nik" pattern="[0-9]{16}" minlength="16" maxlength="16" required title="NIK harus 16 angka">
+        <small>Isikan 16 angka NIK Anda</small>
+
+        <label for="hp">Nomor HP</label>
+        <input type="tel" id="hp" name="hp" pattern="[0-9]{10,13}" required title="Nomor HP 10-13 angka">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Kata Sandi</legend>
+
+        <label for="password">Kata Sandi</label>
+        <input type="password" id="password" name="password" minlength="8" required>
+
+        <label for="password2">Ulangi Kata Sandi</label>
+        <input type="password" id="password2" name="password2" minlength="8" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Persetujuan</legend>
+        <p>
+          <input type="checkbox" id="setuju" name="setuju" required>
+          <label for="setuju" class="inline">Saya menyatakan data yang diisi adalah benar dan bersedia mematuhi peraturan yang berlaku.</label>
+        </p>
+      </fieldset>
+
+      <button type="submit">Daftar</button>
+    </form>
+
+    <p>Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Kelurahan Sukamaju. Semua data fiktif untuk portofolio.</p>
+  </footer>
+</body>
+</html>
