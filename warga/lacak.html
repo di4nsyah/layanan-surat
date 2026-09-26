@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lacak Pengajuan - Layanan Surat Online</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
   <header>
@@ -16,14 +18,14 @@
     <a href="../index.html">Beranda</a>
     <a href="dashboard.html">Dashboard</a>
     <a href="ajukan.html">Ajukan Surat</a>
-    <a href="lacak.html">Lacak Pengajuan</a>
+    <a href="lacak.html">Lacak</a>
     <a href="login.html">Keluar</a>
   </nav>
 
   <main>
     <h2>Lacak Pengajuan Surat</h2>
 
-    <section>
+    <section class="card">
       <h3>Ringkasan Pengajuan</h3>
       <dl>
         <dt>Nomor Pengajuan</dt>
@@ -33,14 +35,14 @@
         <dt>Tanggal Pengajuan</dt>
         <dd>20 September 2026</dd>
         <dt>Status Saat Ini</dt>
-        <dd>Diverifikasi</dd>
+        <dd><span class="status-badge status-diverifikasi">Diverifikasi</span></dd>
       </dl>
     </section>
 
     <section>
       <h3>Riwayat Status</h3>
       <div class="overflow-x">
-        <table class="bordered">
+        <table>
           <thead>
             <tr>
               <th>Waktu</th>
@@ -50,46 +52,44 @@
           </thead>
           <tbody>
             <tr>
-              <td>2026-09-20 09:15</td>
-              <td>Draft</td>
-              <td>Pengajuan dibuat</td>
+              <td data-label="Waktu">2026-09-20 09:15</td>
+              <td data-label="Status"><span class="status-badge status-draft">Draft</span></td>
+              <td data-label="Keterangan">Pengajuan dibuat</td>
             </tr>
             <tr>
-              <td>2026-09-20 09:20</td>
-              <td>Diajukan</td>
-              <td>Menunggu verifikasi petugas</td>
+              <td data-label="Waktu">2026-09-20 09:20</td>
+              <td data-label="Status"><span class="status-badge status-diajukan">Diajukan</span></td>
+              <td data-label="Keterangan">Menunggu verifikasi petugas</td>
             </tr>
             <tr>
-              <td>2026-09-22 14:30</td>
-              <td>Diverifikasi</td>
-              <td>Berkas lengkap, data diverifikasi</td>
+              <td data-label="Waktu">2026-09-22 14:30</td>
+              <td data-label="Status"><span class="status-badge status-diverifikasi">Diverifikasi</span></td>
+              <td data-label="Keterangan">Berkas lengkap, data diverifikasi</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section>
+    <section class="card">
       <h3>Daftar Berkas</h3>
       <ul>
-        <li>KTP - 2026-09-20 09:15</li>
-        <li>Kartu Keluarga (KK) - 2026-09-20 09:15</li>
+        <li>KTP — 2026-09-20 09:15</li>
+        <li>Kartu Keluarga (KK) — 2026-09-20 09:15</li>
       </ul>
     </section>
 
-    <section>
+    <section class="card">
       <h3>Hasil Surat</h3>
       <p>Unduhan PDF tersedia setelah pengajuan <strong>Disetujui</strong> dan berstatus <strong>Selesai</strong>.</p>
       <p>Saat ini status pengajuan Anda adalah <strong>Diverifikasi</strong>. Mohon tunggu proses verifikasi lebih lanjut dari petugas kelurahan.</p>
     </section>
 
-    <section>
-      <p><a href="dashboard.html">Kembali ke Dashboard</a></p>
-    </section>
+    <p><a href="dashboard.html" class="btn btn-outline">Kembali ke Dashboard</a></p>
   </main>
 
   <footer>
-    <p>&copy; 2026 Kelurahan Sukamaju. Semua data fiktif untuk portofolio.</p>
+    <p>&copy; 2026 Kelurahan Sukamaju. Semua data untuk portofolio.</p>
   </footer>
 </body>
 </html>

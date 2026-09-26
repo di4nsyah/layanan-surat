@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daftar - Layanan Surat Online</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
   <header>
@@ -28,9 +30,9 @@
         <label for="nama">Nama Lengkap</label>
         <input type="text" id="nama" name="nama" required>
 
-        <label for="nik">NIK (Nomor Induk Kependudukan)</label>
+        <label for="nik">NIK (16 angka)</label>
         <input type="text" id="nik" name="nik" pattern="[0-9]{16}" minlength="16" maxlength="16" required title="NIK harus 16 angka">
-        <small>Isikan 16 angka NIK Anda</small>
+        <small>Isi 16 angka NIK sesuai KTP</small>
 
         <label for="hp">Nomor HP</label>
         <input type="tel" id="hp" name="hp" pattern="[0-9]{10,13}" required title="Nomor HP 10-13 angka">
@@ -53,7 +55,7 @@
         <legend>Persetujuan</legend>
         <p>
           <input type="checkbox" id="setuju" name="setuju" required>
-          <label for="setuju" class="inline">Saya menyatakan data yang diisi adalah benar dan bersedia mematuhi peraturan yang berlaku.</label>
+          <label for="setuju" class="inline">Data yang diisi benar dan bersedia mematuhi peraturan yang berlaku.</label>
         </p>
       </fieldset>
 
@@ -64,7 +66,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Kelurahan Sukamaju. Semua data fiktif untuk portofolio.</p>
+    <p>&copy; 2026 Kelurahan Sukamaju. Semua data untuk portofolio.</p>
   </footer>
 </body>
 </html>

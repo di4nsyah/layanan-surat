@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ajukan Surat - Layanan Surat Online</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
   <header>
@@ -16,7 +18,7 @@
     <a href="../index.html">Beranda</a>
     <a href="dashboard.html">Dashboard</a>
     <a href="ajukan.html">Ajukan Surat</a>
-    <a href="lacak.html">Lacak Pengajuan</a>
+    <a href="lacak.html">Lacak</a>
     <a href="login.html">Keluar</a>
   </nav>
 
@@ -25,7 +27,7 @@
 
     <form action="#" method="post">
       <fieldset>
-        <legend>Langkah 1: Pilih Jenis Surat</legend>
+        <legend><span class="step-num">1</span> Pilih Jenis Surat</legend>
         <div class="radio-group">
           <input type="radio" id="jenis_pengantar" name="jenis_surat" value="pengantar" required>
           <label for="jenis_pengantar" class="inline">Surat Pengantar</label><br>
@@ -39,7 +41,7 @@
       </fieldset>
 
       <fieldset>
-        <legend>Langkah 2: Data Pemohon</legend>
+        <legend><span class="step-num">2</span> Data Pemohon</legend>
 
         <label for="nama">Nama Lengkap</label>
         <input type="text" id="nama" name="nama" value="Budi Santoso" required>
@@ -52,7 +54,7 @@
       </fieldset>
 
       <fieldset>
-        <legend>Langkah 3: Detail Sesuai Jenis Surat</legend>
+        <legend><span class="step-num">3</span> Detail Sesuai Jenis Surat</legend>
 
         <div id="fields_pengantar">
           <label for="tujuan">Instansi Tujuan</label>
@@ -97,7 +99,7 @@
       </fieldset>
 
       <fieldset>
-        <legend>Langkah 4: Unggah Berkas</legend>
+        <legend><span class="step-num">4</span> Unggah Berkas</legend>
         <p>Berkas wajib:</p>
 
         <label for="ktp">KTP (wajib)</label>
@@ -115,7 +117,7 @@
       </fieldset>
 
       <fieldset>
-        <legend>Langkah 5: Konfirmasi</legend>
+        <legend><span class="step-num">5</span> Konfirmasi</legend>
         <p>
           <input type="checkbox" id="konfirmasi" name="konfirmasi" required>
           <label for="konfirmasi" class="inline">Saya menyatakan data yang diisi adalah benar dan seluruh berkas yang diunggah adalah asli.</label>
@@ -127,7 +129,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Kelurahan Sukamaju. Semua data fiktif untuk portofolio.</p>
+    <p>&copy; 2026 Kelurahan Sukamaju. Semua data untuk portofolio.</p>
   </footer>
 </body>
 </html>

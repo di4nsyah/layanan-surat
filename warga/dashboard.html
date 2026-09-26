@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard - Layanan Surat Online</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
   <header>
@@ -16,20 +18,20 @@
     <a href="../index.html">Beranda</a>
     <a href="dashboard.html">Dashboard</a>
     <a href="ajukan.html">Ajukan Surat</a>
-    <a href="lacak.html">Lacak Pengajuan</a>
+    <a href="lacak.html">Lacak</a>
     <a href="login.html">Keluar</a>
   </nav>
 
   <main>
     <section>
       <h2>Selamat Datang, Budi Santoso</h2>
-      <p><a href="ajukan.html">Ajukan Surat Baru</a></p>
+      <a href="ajukan.html" class="btn">Ajukan Surat Baru</a>
     </section>
 
     <section>
       <h2>Daftar Pengajuan Surat</h2>
       <div class="overflow-x">
-        <table class="bordered">
+        <table>
           <thead>
             <tr>
               <th>No.</th>
@@ -41,25 +43,25 @@
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
-              <td>Surat Keterangan Domisili</td>
-              <td>2026-09-20</td>
-              <td>Diverifikasi</td>
-              <td><a href="lacak.html">Lacak</a></td>
+              <td data-label="No.">1</td>
+              <td data-label="Jenis Surat">Surat Keterangan Domisili</td>
+              <td data-label="Tanggal">2026-09-20</td>
+              <td data-label="Status"><span class="status-badge status-diverifikasi">Diverifikasi</span></td>
+              <td data-label="Aksi"><a href="lacak.html">Lacak</a></td>
             </tr>
             <tr>
-              <td>2</td>
-              <td>Surat Pengantar</td>
-              <td>2026-09-18</td>
-              <td>Selesai</td>
-              <td><a href="lacak.html">Unduh</a></td>
+              <td data-label="No.">2</td>
+              <td data-label="Jenis Surat">Surat Pengantar</td>
+              <td data-label="Tanggal">2026-09-18</td>
+              <td data-label="Status"><span class="status-badge status-selesai">Selesai</span></td>
+              <td data-label="Aksi"><a href="lacak.html">Unduh</a></td>
             </tr>
             <tr>
-              <td>3</td>
-              <td>SKTM</td>
-              <td>2026-09-15</td>
-              <td>Ditolak</td>
-              <td><a href="lacak.html">Lacak</a></td>
+              <td data-label="No.">3</td>
+              <td data-label="Jenis Surat">SKTM</td>
+              <td data-label="Tanggal">2026-09-15</td>
+              <td data-label="Status"><span class="status-badge status-ditolak">Ditolak</span></td>
+              <td data-label="Aksi"><a href="lacak.html">Lacak</a></td>
             </tr>
           </tbody>
         </table>
@@ -68,7 +70,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Kelurahan Sukamaju. Semua data fiktif untuk portofolio.</p>
+    <p>&copy; 2026 Kelurahan Sukamaju. Semua data untuk portofolio.</p>
   </footer>
 </body>
 </html>
