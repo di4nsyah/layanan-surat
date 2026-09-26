@@ -9,68 +9,128 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-  <header>
-    <h1>Layanan Surat Online</h1>
-    <p>Kelurahan Sukamaju</p>
-  </header>
-
-  <nav>
-    <a href="../index.html">Beranda</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="ajukan.html">Ajukan Surat</a>
-    <a href="lacak.html">Lacak</a>
-    <a href="login.html">Keluar</a>
-  </nav>
-
-  <main>
-    <section>
-      <h2>Selamat Datang, Budi Santoso</h2>
-      <a href="ajukan.html" class="btn">Ajukan Surat Baru</a>
-    </section>
-
-    <section>
-      <h2>Daftar Pengajuan Surat</h2>
-      <div class="overflow-x">
-        <table>
-          <thead>
-            <tr>
-              <th>No.</th>
-              <th>Jenis Surat</th>
-              <th>Tanggal</th>
-              <th>Status</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="No.">1</td>
-              <td data-label="Jenis Surat">Surat Keterangan Domisili</td>
-              <td data-label="Tanggal">2026-09-20</td>
-              <td data-label="Status"><span class="status-badge status-diverifikasi">Diverifikasi</span></td>
-              <td data-label="Aksi"><a href="lacak.html">Lacak</a></td>
-            </tr>
-            <tr>
-              <td data-label="No.">2</td>
-              <td data-label="Jenis Surat">Surat Pengantar</td>
-              <td data-label="Tanggal">2026-09-18</td>
-              <td data-label="Status"><span class="status-badge status-selesai">Selesai</span></td>
-              <td data-label="Aksi"><a href="lacak.html">Unduh</a></td>
-            </tr>
-            <tr>
-              <td data-label="No.">3</td>
-              <td data-label="Jenis Surat">SKTM</td>
-              <td data-label="Tanggal">2026-09-15</td>
-              <td data-label="Status"><span class="status-badge status-ditolak">Ditolak</span></td>
-              <td data-label="Aksi"><a href="lacak.html">Lacak</a></td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Layanan Surat Online</h1>
+        <p>Kelurahan Sukamaju</p>
       </div>
-    </section>
-  </main>
+      <nav class="side-nav">
+        <a class="side-link is-active" href="dashboard.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          Dashboard
+        </a>
+        <a class="side-link" href="ajukan.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+          Ajukan Surat
+        </a>
+        <a class="side-link" href="login.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg>
+          Keluar
+        </a>
+      </nav>
+    </aside>
 
-  <footer>
-    <p>&copy; 2026 Kelurahan Sukamaju. Semua data untuk portofolio.</p>
-  </footer>
+    <div class="content">
+      <main>
+        <div class="page-head">
+          <h2>Selamat Datang, Budi Santoso</h2>
+          <a href="ajukan.html" class="btn">Ajukan Surat Baru</a>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-card">
+            <span class="stat-icon stat-icon-total" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>
+            </span>
+            <div class="stat-body">
+              <span class="stat-num">12</span>
+              <span class="stat-label">Total Pengajuan</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon stat-icon-proses" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <div class="stat-body">
+              <span class="stat-num">2</span>
+              <span class="stat-label">Sedang Diproses</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon stat-icon-selesai" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </span>
+            <div class="stat-body">
+              <span class="stat-num">8</span>
+              <span class="stat-label">Selesai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-grid">
+          <section class="panel">
+            <h3>Daftar Pengajuan Surat</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Jenis Surat</th>
+                    <th>Tanggal</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="No.">1</td>
+                    <td data-label="Jenis Surat">Surat Keterangan Domisili</td>
+                    <td data-label="Tanggal">2026-09-20</td>
+                    <td data-label="Status"><span class="status-badge status-diverifikasi">Diverifikasi</span></td>
+                    <td data-label="Aksi"><a href="lacak.html">Lacak</a></td>
+                  </tr>
+                  <tr>
+                    <td data-label="No.">2</td>
+                    <td data-label="Jenis Surat">Surat Pengantar</td>
+                    <td data-label="Tanggal">2026-09-18</td>
+                    <td data-label="Status"><span class="status-badge status-selesai">Selesai</span></td>
+                    <td data-label="Aksi"><a href="lacak.html">Unduh</a></td>
+                  </tr>
+                  <tr>
+                    <td data-label="No.">3</td>
+                    <td data-label="Jenis Surat">SKTM</td>
+                    <td data-label="Tanggal">2026-09-15</td>
+                    <td data-label="Status"><span class="status-badge status-ditolak">Ditolak</span></td>
+                    <td data-label="Aksi"><a href="lacak.html">Lacak</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <aside class="panel">
+            <h3>Pengajuan Aktif</h3>
+            <div class="ring" role="img" aria-label="Progres pengajuan SRAT-2026-0001: tahap 3 dari 5, status Diverifikasi">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="ring-track" cx="50" cy="50" r="42"></circle>
+                <circle class="ring-value" cx="50" cy="50" r="42"></circle>
+              </svg>
+              <div class="ring-center">
+                <strong>3/5</strong>
+                <span>Diverifikasi</span>
+              </div>
+            </div>
+            <p class="ring-caption">SRAT-2026-0001<br>Surat Keterangan Domisili</p>
+            <a href="lacak.html" class="btn btn-outline">Lihat Detail</a>
+          </aside>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 Kelurahan Sukamaju. Semua data untuk portofolio.</p>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>

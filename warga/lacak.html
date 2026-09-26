@@ -9,87 +9,112 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-  <header>
-    <h1>Layanan Surat Online</h1>
-    <p>Kelurahan Sukamaju</p>
-  </header>
-
-  <nav>
-    <a href="../index.html">Beranda</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="ajukan.html">Ajukan Surat</a>
-    <a href="lacak.html">Lacak</a>
-    <a href="login.html">Keluar</a>
-  </nav>
-
-  <main>
-    <h2>Lacak Pengajuan Surat</h2>
-
-    <section class="card">
-      <h3>Ringkasan Pengajuan</h3>
-      <dl>
-        <dt>Nomor Pengajuan</dt>
-        <dd>SRAT-2026-0001</dd>
-        <dt>Jenis Surat</dt>
-        <dd>Surat Keterangan Domisili</dd>
-        <dt>Tanggal Pengajuan</dt>
-        <dd>20 September 2026</dd>
-        <dt>Status Saat Ini</dt>
-        <dd><span class="status-badge status-diverifikasi">Diverifikasi</span></dd>
-      </dl>
-    </section>
-
-    <section>
-      <h3>Riwayat Status</h3>
-      <div class="overflow-x">
-        <table>
-          <thead>
-            <tr>
-              <th>Waktu</th>
-              <th>Status</th>
-              <th>Keterangan</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="Waktu">2026-09-20 09:15</td>
-              <td data-label="Status"><span class="status-badge status-draft">Draft</span></td>
-              <td data-label="Keterangan">Pengajuan dibuat</td>
-            </tr>
-            <tr>
-              <td data-label="Waktu">2026-09-20 09:20</td>
-              <td data-label="Status"><span class="status-badge status-diajukan">Diajukan</span></td>
-              <td data-label="Keterangan">Menunggu verifikasi petugas</td>
-            </tr>
-            <tr>
-              <td data-label="Waktu">2026-09-22 14:30</td>
-              <td data-label="Status"><span class="status-badge status-diverifikasi">Diverifikasi</span></td>
-              <td data-label="Keterangan">Berkas lengkap, data diverifikasi</td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Layanan Surat Online</h1>
+        <p>Kelurahan Sukamaju</p>
       </div>
-    </section>
+      <nav class="side-nav">
+        <a class="side-link" href="dashboard.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          Dashboard
+        </a>
+        <a class="side-link" href="ajukan.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+          Ajukan Surat
+        </a>
+        <a class="side-link" href="login.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg>
+          Keluar
+        </a>
+      </nav>
+    </aside>
 
-    <section class="card">
-      <h3>Daftar Berkas</h3>
-      <ul>
-        <li>KTP — 2026-09-20 09:15</li>
-        <li>Kartu Keluarga (KK) — 2026-09-20 09:15</li>
-      </ul>
-    </section>
+    <div class="content">
+      <main>
+        <h2>Lacak Pengajuan Surat</h2>
 
-    <section class="card">
-      <h3>Hasil Surat</h3>
-      <p>Unduhan PDF tersedia setelah pengajuan <strong>Disetujui</strong> dan berstatus <strong>Selesai</strong>.</p>
-      <p>Saat ini status pengajuan Anda adalah <strong>Diverifikasi</strong>. Mohon tunggu proses verifikasi lebih lanjut dari petugas kelurahan.</p>
-    </section>
+        <div class="panel-grid">
+          <section class="panel">
+            <h3>Ringkasan Pengajuan</h3>
+            <dl>
+              <dt>Nomor Pengajuan</dt>
+              <dd>SRAT-2026-0001</dd>
+              <dt>Jenis Surat</dt>
+              <dd>Surat Keterangan Domisili</dd>
+              <dt>Tanggal Pengajuan</dt>
+              <dd>20 September 2026</dd>
+              <dt>Status Saat Ini</dt>
+              <dd><span class="status-badge status-diverifikasi">Diverifikasi</span></dd>
+            </dl>
 
-    <p><a href="dashboard.html" class="btn btn-outline">Kembali ke Dashboard</a></p>
-  </main>
+            <h3>Riwayat Status</h3>
+            <ol class="timeline">
+              <li class="timeline-item is-done">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <div class="timeline-head">
+                  <span class="status-badge status-draft">Draft</span>
+                  <time>2026-09-20 09:15</time>
+                </div>
+                <div class="timeline-body"><p>Pengajuan dibuat</p></div>
+              </li>
+              <li class="timeline-item is-done">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <div class="timeline-head">
+                  <span class="status-badge status-diajukan">Diajukan</span>
+                  <time>2026-09-20 09:20</time>
+                </div>
+                <div class="timeline-body"><p>Menunggu verifikasi petugas</p></div>
+              </li>
+              <li class="timeline-item is-current">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <div class="timeline-head">
+                  <span class="status-badge status-diverifikasi">Diverifikasi</span>
+                  <time>2026-09-22 14:30</time>
+                </div>
+                <div class="timeline-body"><p>Berkas lengkap, data diverifikasi</p></div>
+              </li>
+            </ol>
+          </section>
 
-  <footer>
-    <p>&copy; 2026 Kelurahan Sukamaju. Semua data untuk portofolio.</p>
-  </footer>
+          <aside class="panel">
+            <h3>Progres Pengajuan</h3>
+            <div class="ring" role="img" aria-label="Progres pengajuan: tahap 3 dari 5, status Diverifikasi">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="ring-track" cx="50" cy="50" r="42"></circle>
+                <circle class="ring-value" cx="50" cy="50" r="42"></circle>
+              </svg>
+              <div class="ring-center">
+                <strong>3/5</strong>
+                <span>Diverifikasi</span>
+              </div>
+            </div>
+            <p class="ring-caption">Tahap 3 dari 5: Diverifikasi</p>
+          </aside>
+        </div>
+
+        <section class="panel">
+          <h3>Daftar Berkas</h3>
+          <ul>
+            <li>KTP — 2026-09-20 09:15</li>
+            <li>Kartu Keluarga (KK) — 2026-09-20 09:15</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h3>Hasil Surat</h3>
+          <p>Unduhan PDF tersedia setelah pengajuan <strong>Disetujui</strong> dan berstatus <strong>Selesai</strong>.</p>
+          <p>Saat ini status pengajuan Anda adalah <strong>Diverifikasi</strong>. Mohon tunggu proses verifikasi lebih lanjut dari petugas kelurahan.</p>
+        </section>
+
+        <p><a href="dashboard.html" class="btn btn-outline">Kembali ke Dashboard</a></p>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 Kelurahan Sukamaju. Semua data untuk portofolio.</p>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>

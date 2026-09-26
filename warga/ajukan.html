@@ -9,127 +9,139 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-  <header>
-    <h1>Layanan Surat Online</h1>
-    <p>Kelurahan Sukamaju</p>
-  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Layanan Surat Online</h1>
+        <p>Kelurahan Sukamaju</p>
+      </div>
+      <nav class="side-nav">
+        <a class="side-link" href="dashboard.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          Dashboard
+        </a>
+        <a class="side-link is-active" href="ajukan.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+          Ajukan Surat
+        </a>
+        <a class="side-link" href="login.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg>
+          Keluar
+        </a>
+      </nav>
+    </aside>
 
-  <nav>
-    <a href="../index.html">Beranda</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="ajukan.html">Ajukan Surat</a>
-    <a href="lacak.html">Lacak</a>
-    <a href="login.html">Keluar</a>
-  </nav>
+    <div class="content">
+      <main>
+        <h2>Ajukan Surat Baru</h2>
 
-  <main>
-    <h2>Ajukan Surat Baru</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend><span class="step-num">1</span> Pilih Jenis Surat</legend>
+            <div class="radio-group">
+              <input type="radio" id="jenis_pengantar" name="jenis_surat" value="pengantar" required>
+              <label for="jenis_pengantar" class="inline">Surat Pengantar</label><br>
+              <input type="radio" id="jenis_domisili" name="jenis_surat" value="domisili">
+              <label for="jenis_domisili" class="inline">Surat Keterangan Domisili</label><br>
+              <input type="radio" id="jenis_sktm" name="jenis_surat" value="sktm">
+              <label for="jenis_sktm" class="inline">Surat Keterangan Tidak Mampu (SKTM)</label><br>
+              <input type="radio" id="jenis_usaha" name="jenis_surat" value="usaha">
+              <label for="jenis_usaha" class="inline">Surat Keterangan Usaha</label>
+            </div>
+          </fieldset>
 
-    <form action="#" method="post">
-      <fieldset>
-        <legend><span class="step-num">1</span> Pilih Jenis Surat</legend>
-        <div class="radio-group">
-          <input type="radio" id="jenis_pengantar" name="jenis_surat" value="pengantar" required>
-          <label for="jenis_pengantar" class="inline">Surat Pengantar</label><br>
-          <input type="radio" id="jenis_domisili" name="jenis_surat" value="domisili">
-          <label for="jenis_domisili" class="inline">Surat Keterangan Domisili</label><br>
-          <input type="radio" id="jenis_sktm" name="jenis_surat" value="sktm">
-          <label for="jenis_sktm" class="inline">Surat Keterangan Tidak Mampu (SKTM)</label><br>
-          <input type="radio" id="jenis_usaha" name="jenis_surat" value="usaha">
-          <label for="jenis_usaha" class="inline">Surat Keterangan Usaha</label>
-        </div>
-      </fieldset>
+          <fieldset>
+            <legend><span class="step-num">2</span> Data Pemohon</legend>
 
-      <fieldset>
-        <legend><span class="step-num">2</span> Data Pemohon</legend>
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" value="Budi Santoso" required>
 
-        <label for="nama">Nama Lengkap</label>
-        <input type="text" id="nama" name="nama" value="Budi Santoso" required>
+            <label for="nik">NIK</label>
+            <input type="text" id="nik" name="nik" pattern="[0-9]{16}" minlength="16" maxlength="16" value="3275012345678901" required>
 
-        <label for="nik">NIK</label>
-        <input type="text" id="nik" name="nik" pattern="[0-9]{16}" minlength="16" maxlength="16" value="3275012345678901" required>
+            <label for="alamat">Alamat</label>
+            <textarea id="alamat" name="alamat" rows="3" required>Jl. Merdeka No. 10, RT 003/RW 005, Kelurahan Sukamaju</textarea>
+          </fieldset>
 
-        <label for="alamat">Alamat</label>
-        <textarea id="alamat" name="alamat" rows="3" required>Jl. Merdeka No. 10, RT 003/RW 005, Kelurahan Sukamaju</textarea>
-      </fieldset>
+          <fieldset>
+            <legend><span class="step-num">3</span> Detail Sesuai Jenis Surat</legend>
 
-      <fieldset>
-        <legend><span class="step-num">3</span> Detail Sesuai Jenis Surat</legend>
+            <div id="fields_pengantar">
+              <label for="tujuan">Instansi Tujuan</label>
+              <input type="text" id="tujuan" name="tujuan">
 
-        <div id="fields_pengantar">
-          <label for="tujuan">Instansi Tujuan</label>
-          <input type="text" id="tujuan" name="tujuan">
+              <label for="keperluan_pengantar">Keperluan</label>
+              <textarea id="keperluan_pengantar" name="keperluan_pengantar" rows="2"></textarea>
+            </div>
 
-          <label for="keperluan_pengantar">Keperluan</label>
-          <textarea id="keperluan_pengantar" name="keperluan_pengantar" rows="2"></textarea>
-        </div>
+            <div id="fields_domisili">
+              <label for="lama_tinggal">Lama Tinggal (tahun)</label>
+              <input type="number" id="lama_tinggal" name="lama_tinggal" min="0">
 
-        <div id="fields_domisili">
-          <label for="lama_tinggal">Lama Tinggal (tahun)</label>
-          <input type="number" id="lama_tinggal" name="lama_tinggal" min="0">
+              <label for="keperluan_domisili">Keperluan</label>
+              <textarea id="keperluan_domisili" name="keperluan_domisili" rows="2"></textarea>
+            </div>
 
-          <label for="keperluan_domisili">Keperluan</label>
-          <textarea id="keperluan_domisili" name="keperluan_domisili" rows="2"></textarea>
-        </div>
+            <div id="fields_sktm">
+              <label for="penghasilan">Penghasilan Per Bulan (Rp)</label>
+              <input type="number" id="penghasilan" name="penghasilan" min="0">
 
-        <div id="fields_sktm">
-          <label for="penghasilan">Penghasilan Per Bulan (Rp)</label>
-          <input type="number" id="penghasilan" name="penghasilan" min="0">
+              <label for="tanggungan">Jumlah Tanggungan</label>
+              <input type="number" id="tanggungan" name="tanggungan" min="0">
 
-          <label for="tanggungan">Jumlah Tanggungan</label>
-          <input type="number" id="tanggungan" name="tanggungan" min="0">
+              <label for="keperluan_sktm">Keperluan</label>
+              <textarea id="keperluan_sktm" name="keperluan_sktm" rows="2"></textarea>
+            </div>
 
-          <label for="keperluan_sktm">Keperluan</label>
-          <textarea id="keperluan_sktm" name="keperluan_sktm" rows="2"></textarea>
-        </div>
+            <div id="fields_usaha">
+              <label for="nama_usaha">Nama Usaha</label>
+              <input type="text" id="nama_usaha" name="nama_usaha">
 
-        <div id="fields_usaha">
-          <label for="nama_usaha">Nama Usaha</label>
-          <input type="text" id="nama_usaha" name="nama_usaha">
+              <label for="jenis_usaha">Jenis Usaha</label>
+              <input type="text" id="jenis_usaha" name="jenis_usaha">
 
-          <label for="jenis_usaha">Jenis Usaha</label>
-          <input type="text" id="jenis_usaha" name="jenis_usaha">
+              <label for="alamat_usaha">Alamat Usaha</label>
+              <textarea id="alamat_usaha" name="alamat_usaha" rows="2"></textarea>
 
-          <label for="alamat_usaha">Alamat Usaha</label>
-          <textarea id="alamat_usaha" name="alamat_usaha" rows="2"></textarea>
+              <label for="lama_usaha">Lama Usaha (tahun)</label>
+              <input type="number" id="lama_usaha" name="lama_usaha" min="0">
+            </div>
+          </fieldset>
 
-          <label for="lama_usaha">Lama Usaha (tahun)</label>
-          <input type="number" id="lama_usaha" name="lama_usaha" min="0">
-        </div>
-      </fieldset>
+          <fieldset>
+            <legend><span class="step-num">4</span> Unggah Berkas</legend>
+            <p>Berkas wajib:</p>
 
-      <fieldset>
-        <legend><span class="step-num">4</span> Unggah Berkas</legend>
-        <p>Berkas wajib:</p>
+            <label for="ktp">KTP (wajib)</label>
+            <input type="file" id="ktp" name="ktp" accept=".jpg,.jpeg,.png,.pdf" required>
 
-        <label for="ktp">KTP (wajib)</label>
-        <input type="file" id="ktp" name="ktp" accept=".jpg,.jpeg,.png,.pdf" required>
+            <label for="kk">Kartu Keluarga / KK (wajib)</label>
+            <input type="file" id="kk" name="kk" accept=".jpg,.jpeg,.png,.pdf" required>
 
-        <label for="kk">Kartu Keluarga / KK (wajib)</label>
-        <input type="file" id="kk" name="kk" accept=".jpg,.jpeg,.png,.pdf" required>
+            <p>Berkas pendukung (opsional):</p>
 
-        <p>Berkas pendukung (opsional):</p>
+            <label for="pendukung">Surat Keterangan Pendukung</label>
+            <input type="file" id="pendukung" name="pendukung" accept=".jpg,.jpeg,.png,.pdf">
 
-        <label for="pendukung">Surat Keterangan Pendukung</label>
-        <input type="file" id="pendukung" name="pendukung" accept=".jpg,.jpeg,.png,.pdf">
+            <small>Maksimal 2 MB per file. Format: JPG, JPEG, PNG, PDF</small>
+          </fieldset>
 
-        <small>Maksimal 2 MB per file. Format: JPG, JPEG, PNG, PDF</small>
-      </fieldset>
+          <fieldset>
+            <legend><span class="step-num">5</span> Konfirmasi</legend>
+            <p>
+              <input type="checkbox" id="konfirmasi" name="konfirmasi" required>
+              <label for="konfirmasi" class="inline">Saya menyatakan data yang diisi adalah benar dan seluruh berkas yang diunggah adalah asli.</label>
+            </p>
+          </fieldset>
 
-      <fieldset>
-        <legend><span class="step-num">5</span> Konfirmasi</legend>
-        <p>
-          <input type="checkbox" id="konfirmasi" name="konfirmasi" required>
-          <label for="konfirmasi" class="inline">Saya menyatakan data yang diisi adalah benar dan seluruh berkas yang diunggah adalah asli.</label>
-        </p>
-      </fieldset>
+          <button type="submit">Kirim Pengajuan</button>
+        </form>
+      </main>
 
-      <button type="submit">Kirim Pengajuan</button>
-    </form>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Kelurahan Sukamaju. Semua data untuk portofolio.</p>
-  </footer>
+      <footer>
+        <p>&copy; 2026 Kelurahan Sukamaju. Semua data untuk portofolio.</p>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
